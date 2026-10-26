@@ -15,6 +15,7 @@ import {
   Info,
   HelpCircle
 } from 'lucide-react';
+import { getAssetUrl } from '../../utils/assetUrl';
 
 type OperatingSystem = 'windows' | 'macos' | 'linux';
 
@@ -486,7 +487,7 @@ export const InstallationTutorial: React.FC = () => {
               <div className="w-full aspect-[16/10] rounded-xl bg-slate-900 border border-slate-800 overflow-hidden relative group shadow-lg flex items-center justify-center">
                 {currentStep.number === 1 && (
                   <img
-                    src="/assets/aistudio/1._download_05500453.png"
+                    src={getAssetUrl('assets/aistudio/1._download_05500453.png')}
                     alt="Paso 1: Portal Oficial de Descargas de Blender"
                     className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
                   />
@@ -494,7 +495,7 @@ export const InstallationTutorial: React.FC = () => {
                 {currentStep.number === 2 && (
                   <div className="relative w-full h-full">
                     <img
-                      src="/assets/blender_os_select_1792991918171.jpg"
+                      src={getAssetUrl('assets/blender_os_select_1792991918171.jpg')}
                       alt="Paso 2: Selección de Sistema Operativo y Versión"
                       className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-300"
                     />
@@ -505,7 +506,7 @@ export const InstallationTutorial: React.FC = () => {
                 )}
                 {currentStep.number === 3 && (
                   <img
-                    src="/assets/aistudio/2_download_36a3159e.png"
+                    src={getAssetUrl('assets/aistudio/2_download_36a3159e.png')}
                     alt="Paso 3: Descarga del instalador .msi de Blender"
                     className="w-full h-full object-contain bg-slate-950 p-2 hover:scale-105 transition-transform duration-300"
                   />
@@ -513,13 +514,13 @@ export const InstallationTutorial: React.FC = () => {
                 {currentStep.number === 4 && (
                   <div className="relative w-full h-full flex flex-col">
                     <img
-                      src={
+                      src={getAssetUrl(
                         wizardSubstep === 1
-                          ? "/assets/aistudio/3_downlaod_eda576dc.png"
+                          ? 'assets/aistudio/3_downlaod_eda576dc.png'
                           : wizardSubstep === 2
-                          ? "/assets/aistudio/4_download_10083502.png"
-                          : "/assets/aistudio/5_download_8f51d391.png"
-                      }
+                          ? 'assets/aistudio/4_download_10083502.png'
+                          : 'assets/aistudio/5_download_8f51d391.png'
+                      )}
                       alt="Paso 4: Asistente de Instalación de Blender"
                       className="w-full h-full object-contain bg-slate-950 hover:scale-105 transition-transform duration-300"
                     />
@@ -527,14 +528,14 @@ export const InstallationTutorial: React.FC = () => {
                 )}
                 {currentStep.number === 5 && (
                   <img
-                    src="/assets/aistudio/6_download_9c1b1009.png"
+                    src={getAssetUrl('assets/aistudio/6_download_9c1b1009.png')}
                     alt="Paso 5: Pantalla de Bienvenida Splash Screen de Blender"
                     className="w-full h-full object-contain bg-slate-950 hover:scale-105 transition-transform duration-300"
                   />
                 )}
                 {currentStep.number === 6 && (
                   <img
-                    src="/assets/blender_default_cube_1792990671786.jpg"
+                    src={getAssetUrl('assets/blender_default_cube_1792990671786.jpg')}
                     alt="Paso 6: Vista 3D del Viewport con el Cubo Inicial"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />

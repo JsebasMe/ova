@@ -15,6 +15,7 @@ import {
   VolumeX
 } from 'lucide-react';
 import { soundFX } from '../../utils/audioFeedback';
+import { getAssetUrl } from '../../utils/assetUrl';
 
 interface NavbarProps {
   activeSection: MainSection;
@@ -60,7 +61,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               {/* Official OVA Blender Logo */}
               <div className="relative flex items-center justify-center w-11 h-11 rounded-xl bg-gradient-to-tr from-amber-600 via-orange-500 to-amber-400 p-0.5 shadow-lg shadow-orange-600/30 group-hover:scale-105 transition-transform overflow-hidden">
                 <img
-                  src="/assets/ova_blender_logo_1792991899952.jpg"
+                  src={getAssetUrl('assets/ova_blender_logo_1792991899952.jpg')}
                   alt="Logo Oficial OVA Blender"
                   className="w-full h-full object-cover rounded-[10px]"
                 />

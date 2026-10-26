@@ -12,6 +12,7 @@ import {
   MousePointer2
 } from 'lucide-react';
 import { KeyBadge } from '../common/KeyBadge';
+import { getAssetUrl } from '../../utils/assetUrl';
 
 interface HeroCoverProps {
   onStartLearning: () => void;
@@ -85,7 +86,7 @@ export const HeroCover: React.FC<HeroCoverProps> = ({ onStartLearning }) => {
             {/* User Provided Featured Artwork (Blender + FLOW Animation) */}
             <div className="relative w-full aspect-[16/10] sm:aspect-[4/3] rounded-xl overflow-hidden bg-slate-950 border border-slate-800">
               <img
-                src="/assets/aistudio/first_86721a68.jpg"
+                src={getAssetUrl('assets/aistudio/first_86721a68.jpg')}
                 alt="Blender 3D - The Freedom to Create"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 loading="eager"

@@ -18,6 +18,7 @@ import {
   Wrench,
   Maximize2
 } from 'lucide-react';
+import { getAssetUrl } from '../../utils/assetUrl';
 
 export const LabeledGraphicsInterface: React.FC = () => {
   const { state, recordHotspot } = useHabitRadar();
@@ -113,7 +114,7 @@ export const LabeledGraphicsInterface: React.FC = () => {
             
             {/* The Real Blender 5.1 Screenshot */}
             <img
-              src="/assets/aistudio/interfaz_blender_1520d760.png"
+              src={getAssetUrl('assets/aistudio/interfaz_blender_1520d760.png')}
               alt="Blender 5.1 · Entorno de Trabajo Estándar (Layout)"
               className="w-full h-full object-contain bg-slate-950 pointer-events-none"
             />

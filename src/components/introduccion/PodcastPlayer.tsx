@@ -12,6 +12,7 @@ import {
   FastForward,
   Clock
 } from 'lucide-react';
+import { getAssetUrl } from '../../utils/assetUrl';
 
 export const PodcastPlayer: React.FC = () => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -22,7 +23,7 @@ export const PodcastPlayer: React.FC = () => {
   const [isMuted, setIsMuted] = useState<boolean>(false);
   const [playbackRate, setPlaybackRate] = useState<number>(1);
 
-  const audioSrc = '/assets/aistudio/blender_sin_limite_podcast_7f02cb3e.mp3';
+  const audioSrc = getAssetUrl('assets/aistudio/blender_sin_limite_podcast_7f02cb3e.mp3');
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -138,7 +139,7 @@ export const PodcastPlayer: React.FC = () => {
           <div className="md:col-span-4 flex flex-col items-center justify-center">
             <div className="relative w-44 h-44 sm:w-52 sm:h-52 rounded-2xl overflow-hidden bg-slate-950 border-2 border-amber-500/30 shadow-2xl flex items-center justify-center p-3 group/cover">
               <img
-                src="/assets/aistudio/first_86721a68.jpg"
+                src={getAssetUrl('assets/aistudio/first_86721a68.jpg')}
                 alt="Blender sin Límites Podcast"
                 className="w-full h-full object-cover rounded-xl group-hover/cover:scale-105 transition-transform duration-500"
               />

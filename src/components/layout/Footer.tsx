@@ -2,6 +2,7 @@ import React from 'react';
 import { MainSection } from '../../types/ova';
 import { INSTITUTIONAL_DATA } from '../../data/contentData';
 import { Box, GraduationCap, Building2, ExternalLink, Heart } from 'lucide-react';
+import { getAssetUrl } from '../../utils/assetUrl';
 
 interface FooterProps {
   onSelectSection: (section: MainSection) => void;
@@ -19,7 +20,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectSection }) => {
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-600 to-orange-500 p-0.5 shadow-md flex items-center justify-center overflow-hidden shrink-0">
                 <img
-                  src="/assets/ova_blender_logo_1792991899952.jpg"
+                  src={getAssetUrl('assets/ova_blender_logo_1792991899952.jpg')}
                   alt="Logo OVA Blender"
                   className="w-full h-full object-cover rounded-[10px]"
                 />
